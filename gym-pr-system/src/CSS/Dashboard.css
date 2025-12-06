@@ -1,0 +1,28 @@
+.table {
+    width: 100%;
+    border-spacing: 0 15px;
+    border-collapse: separate;
+}
+
+.table td {
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table th {
+    text-align: left;
+    padding: 10px 20px;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}

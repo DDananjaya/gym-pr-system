@@ -1,0 +1,81 @@
+.tv-container { padding: 60px 20px; text-align: center; }
+
+.tv-header h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.records-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.record-card {
+    width: 320px;
+    background: var(--glass-white);
+    backdrop-filter: blur(16px);
+    border: 2px solid var(--glass-border);
+    border-radius: 40px;
+    padding: 40px 20px;
+    position: relative;
+    box-shadow: var(--shadow-floating);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+.record-card:nth-child(even) { animation-delay: 1s; }
+
+.image-wrapper {
+    width: 160px !important;
+    height: 160px !important;
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    padding: 5px;
+    box-shadow: var(--shadow-floating);
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+.image-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.record-category {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.champion-name { font-size: 1.8rem; font-weight: 700; margin: 0; }
+
+.huge-weight {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 5px 0;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.crown-icon { font-size: 3.5rem; position: absolute; top: -35px; z-index: 10; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}

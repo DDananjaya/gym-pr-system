@@ -1,0 +1,145 @@
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.coach-showcase {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.coach-img-large {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    border: 3px solid rgba(255,255,255,0.8);
+    position: relative;
+    z-index: 2;
+}
+
+.glow-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.4;
+    z-index: 1;
+    animation: pulse 4s infinite;
+}
+
+.coach-details { width: 100%; }
+
+.coach-details h2 {
+    font-size: 1.2rem;
+    color: #667eea;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.coach-real-name {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 10px 0;
+    background: var(--text-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #333;
+}
+
+.coach-full-name {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.stat-badge {
+    display: inline-block;
+    background: var(--gold-gradient);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(246, 211, 101, 0.4);
+}
+
+.cert-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cert-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover { transform: translateY(-5px); }
+
+.cert-img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.cert-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.cert-issuer { font-size: 0.9rem; color: #888; }
+
+@keyframes pulse {
+    0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.05); }
+    100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (max-width: 768px) {
+    .about-grid { padding: 0 10px; }
+    .coach-real-name { font-size: 2rem; }
+}
