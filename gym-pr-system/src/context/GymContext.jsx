@@ -14,11 +14,11 @@ export const GymProvider = ({ children }) => {
 
     const fetchData = async () => {
         try {
-            const catRes = await fetch('http://localhost:5000/categories');
+            const catRes = await fetch('https://gym-pr-system.onrender.com/categories');
             const catData = await catRes.json();
             setCategories(catData);
 
-            const memRes = await fetch('http://localhost:5000/members');
+            const memRes = await fetch('https://gym-pr-system.onrender.com/members');
             const memData = await memRes.json();
             setMembers(memData);
         } catch (error) {
@@ -32,7 +32,7 @@ export const GymProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            const res = await fetch('http://localhost:5000/login', {
+            const res = await fetch('https://gym-pr-system.onrender.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
@@ -57,7 +57,7 @@ export const GymProvider = ({ children }) => {
     };
 
     const addMember = async (member) => {
-        await fetch('http://localhost:5000/members', {
+        await fetch('https://gym-pr-system.onrender.com/members', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(member)
@@ -66,12 +66,12 @@ export const GymProvider = ({ children }) => {
     };
 
     const deleteMember = async (id) => {
-        await fetch(`http://localhost:5000/members/${id}`, { method: 'DELETE' });
+        await fetch(`https://gym-pr-system.onrender.com/members/${id}`, { method: 'DELETE' });
         setMembers(prev => prev.filter(m => m.id !== id));
     };
 
     const addPR = async (memberId, prData) => {
-        await fetch('http://localhost:5000/prs', {
+        await fetch('https://gym-pr-system.onrender.com/prs', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ memberId, ...prData })
@@ -80,12 +80,12 @@ export const GymProvider = ({ children }) => {
     };
 
     const deletePR = async (memberId, prId) => {
-        await fetch(`http://localhost:5000/prs/${prId}`, { method: 'DELETE' });
+        await fetch(`https://gym-pr-system.onrender.com/prs/${prId}`, { method: 'DELETE' });
         await fetchData();
     };
 
     const addCategory = async (cat) => {
-        await fetch('http://localhost:5000/categories', {
+        await fetch('https://gym-pr-system.onrender.com/categories', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: cat })
@@ -94,7 +94,7 @@ export const GymProvider = ({ children }) => {
     };
 
     const deleteCategory = async (cat) => {
-        await fetch(`http://localhost:5000/categories/${cat}`, { method: 'DELETE' });
+        await fetch(`https://gym-pr-system.onrender.com/categories/${cat}`, { method: 'DELETE' });
         setCategories(prev => prev.filter(c => c !== cat));
     };
 

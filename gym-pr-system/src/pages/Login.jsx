@@ -11,17 +11,16 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
+        // 1. Wait for the server to verify credentials
         const result = await login(username, password);
 
         if (result.success) {
-
-            if (result.role === 'admin') {
-                navigate('/dashboard');
-            } else if (result.role === 'coach') {
-                navigate('/dashboard');
+            // --- THE CHANGE IS HERE ---
+            // Check the role and decide where to send them
+            if (result.role === 'member') {
+                navigate('/'); // Members go to the TV Board (Home)
             } else {
-                navigate('/');
+                navigate('/dashboard'); // Coaches go to the Admin Panel
             }
         } else {
             alert('Invalid Credentials!');
@@ -31,7 +30,7 @@ const Login = () => {
     return (
         <div className="container" style={{ maxWidth: '400px', marginTop: '100px' }}>
             <div className="card" style={{ textAlign: 'center' }}>
-                <h2 style={{color: '#333'}}>🔐 Staff Access</h2>
+                <h2 style={{color: '#333'}}>🔐 Gym Access</h2>
                 <form onSubmit={handleSubmit}>
                     <input
                         placeholder="Username"
@@ -54,7 +53,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-

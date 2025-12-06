@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { GymContext } from '../context/GymContext';
-import '../CSS/Navbar.css'
+import '../CSS/Navbar.css';
+
 const Navbar = () => {
     const { user, logout } = useContext(GymContext);
     const navigate = useNavigate();
@@ -16,23 +17,20 @@ const Navbar = () => {
             <h2 className="logo">🏋️ GYM PR SYSTEM</h2>
 
             <div className="nav-links">
-                <NavLink to="/" className="nav-item">
-                    Home
-                </NavLink>
-
-                <NavLink to="/about" className="nav-item">
-                    About Us
-                </NavLink>
-
-                <NavLink to="/top10" className="nav-item">
-                    Top 10 PRs
-                </NavLink>
+                <NavLink to="/" className="nav-item">Home</NavLink>
+                <NavLink to="/about" className="nav-item">About Us</NavLink>
+                <NavLink to="/top10" className="nav-item">Top 10 PRs</NavLink>
 
                 {user ? (
                     <>
-                        <NavLink to="/dashboard" className="nav-item">
-                            Dashboard
-                        </NavLink>
+                        {/* --- THE CHANGE IS HERE --- */}
+                        {/* Only show Dashboard if the user is NOT a member */}
+                        {user.role !== 'member' && (
+                            <NavLink to="/dashboard" className="nav-item">
+                                Dashboard
+                            </NavLink>
+                        )}
+
                         <button
                             onClick={handleLogout}
                             className="btn btn-danger"
