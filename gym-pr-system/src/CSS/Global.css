@@ -1,4 +1,4 @@
-/* --- GLOBAL VARIABLES & THEME --- */
+
 :root {
     --bg-color: #f8f9fd;
     --glass-white: rgba(255, 255, 255, 0.7);
@@ -9,7 +9,7 @@
     --shadow-floating: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Custom Text Selection */
+
 ::selection {
     background: #f6d365;
     color: #2d3436;
@@ -31,7 +31,7 @@ body {
     padding: 20px;
 }
 
-/* SHARED COMPONENTS */
+
 .card {
     background: white;
     border-radius: 20px;
