@@ -6,6 +6,7 @@
     gap: 40px;
     max-width: 800px;
     margin: 0 auto 60px auto;
+    width: 100%;
 }
 
 .coach-showcase {
@@ -42,17 +43,8 @@
 
 .coach-details { width: 100%; }
 
-.coach-details h2 {
-    font-size: 1.2rem;
-    color: #667eea;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
 .coach-real-name {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     line-height: 1.1;
     margin: 10px 0;
@@ -60,20 +52,23 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #333;
+    word-wrap: break-word;
 }
 
 .coach-full-name {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #888;
     margin-bottom: 20px;
     font-style: italic;
+    padding: 0 10px;
 }
 
 .bio-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #555;
     margin-bottom: 30px;
+    padding: 0 10px;
 }
 
 .stat-badge {
@@ -87,8 +82,9 @@
 }
 
 .cert-section {
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
+    width: 100%;
 }
 
 .cert-grid {
@@ -104,19 +100,19 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
-
-.cert-card:hover { transform: translateY(-5px); }
 
 .cert-img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: contain;
     background: #f8f9fa;
     border-radius: 10px;
@@ -124,22 +120,6 @@
     border: 1px solid #eee;
 }
 
-.cert-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.cert-issuer { font-size: 0.9rem; color: #888; }
-
-@keyframes pulse {
-    0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.05); }
-    100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-}
-
-@media (max-width: 768px) {
-    .about-grid { padding: 0 10px; }
-    .coach-real-name { font-size: 2rem; }
+@media (min-width: 768px) {
+    .coach-real-name { font-size: 3rem; }
 }

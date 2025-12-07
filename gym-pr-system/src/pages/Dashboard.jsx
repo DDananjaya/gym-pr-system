@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { GymContext } from '../context/GymContext';
-import '../CSS/Dashboard.css'
+import '../CSS/Dashboard.css';
+
 const Dashboard = () => {
     const { members, categories, addMember, deleteMember, addPR, deletePR, addCategory, deleteCategory } = useContext(GymContext);
 
@@ -39,7 +40,7 @@ const Dashboard = () => {
         <div className="container">
             <h1>Dashboard</h1>
 
-
+            {/* 1. Category Management */}
             <div className="card" style={{ borderLeftColor: 'var(--pastel-purple)' }}>
                 <h3>Manage Categories</h3>
                 <div style={{ display: 'flex' }}>
@@ -82,7 +83,8 @@ const Dashboard = () => {
                 <button className="btn btn-success" onClick={handleAddPR}>Save PR</button>
             </div>
 
-            <div className="card">
+            {/* 4. Member Database (FIX APPLIED HERE) */}
+            <div className="card table-card">
                 <h3>Member Database</h3>
                 <table className="table">
                     <thead>
