@@ -51,7 +51,7 @@ const About = () => {
                     <div className="cert-grid">
 
                         <div className="cert-card">
-                            <img src={certFitness} alt="Fitness Cert" className="cert-img" />
+                            <img src={certFitness} alt="Bodybuilding Cert" className="cert-img" />
                             <div className="cert-title">Physical Fitness Instructor Training</div>
                             <div className="cert-issuer">National Institute of Sports Science (Ministry of Youth & Sports)</div>
                             <p style={{fontSize:'0.85rem', color:'#666', marginTop:'10px'}}>
@@ -60,7 +60,7 @@ const About = () => {
                         </div>
 
                         <div className="cert-card">
-                            <img src={certBody} alt="Bodybuilding Cert" className="cert-img" />
+                            <img src={certBody} alt="Fitness Cert" className="cert-img" />
                             <div className="cert-title">Bodybuilding & Exercise Physiology</div>
                             <div className="cert-issuer">IPCR - 4 Day Bodybuilding Workshop</div>
                             <p style={{fontSize:'0.85rem', color:'#666', marginTop:'10px'}}>
