@@ -6,7 +6,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import TopPRs from './pages/TopPRs';
 import About from './pages/About';
-import Home from './pages/Home'; // Add import at top
+import Home from './pages/Home';
 
 
 

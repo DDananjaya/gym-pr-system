@@ -15,7 +15,7 @@ const About = () => {
 
             <div className="container">
 
-                {/* 1. Coach Profile (Centered Layout) */}
+
                 <div className="about-grid">
                     <div className="coach-showcase">
                         <div className="glow-circle"></div>
@@ -41,7 +41,7 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* 2. Certifications Section */}
+
                 <div className="cert-section">
                     <h2 style={{ fontSize: '2rem', fontWeight: '800', color: '#444', marginBottom: '10px', textAlign: 'center' }}>
                         Professional Qualifications

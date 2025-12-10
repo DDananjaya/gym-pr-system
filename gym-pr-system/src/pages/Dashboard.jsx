@@ -5,12 +5,12 @@ import '../CSS/Dashboard.css';
 const Dashboard = () => {
     const { members, categories, addMember, deleteMember, addPR, deletePR, addCategory, deleteCategory } = useContext(GymContext);
 
-    // Local state for forms
+
     const [newMember, setNewMember] = useState({ name: '', age: '', weightClass: '', image: '' });
     const [prForm, setPrForm] = useState({ memberId: '', weight: '', category: '' });
     const [newCat, setNewCat] = useState('');
 
-    // Handle Image Upload (Convert to Base64 to save string in "DB")
+
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
@@ -40,7 +40,7 @@ const Dashboard = () => {
         <div className="container">
             <h1>Dashboard</h1>
 
-            {/* 1. Category Management */}
+
             <div className="card" style={{ borderLeftColor: 'var(--pastel-purple)' }}>
                 <h3>Manage Categories</h3>
                 <div style={{ display: 'flex' }}>
@@ -56,7 +56,6 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            {/* 2. Add Member */}
             <div className="card">
                 <h3>Add New Member</h3>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -68,7 +67,7 @@ const Dashboard = () => {
                 <button className="btn btn-primary" onClick={handleAddMember}>Register Member</button>
             </div>
 
-            {/* 3. Add PR */}
+
             <div className="card" style={{ borderLeftColor: 'var(--pastel-green)' }}>
                 <h3>Log a PR</h3>
                 <select onChange={e => setPrForm({...prForm, memberId: e.target.value})}>
@@ -83,7 +82,7 @@ const Dashboard = () => {
                 <button className="btn btn-success" onClick={handleAddPR}>Save PR</button>
             </div>
 
-            {/* 4. Member Database (FIX APPLIED HERE) */}
+
             <div className="card table-card">
                 <h3>Member Database</h3>
                 <table className="table">

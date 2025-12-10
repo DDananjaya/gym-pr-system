@@ -11,16 +11,15 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // 1. Wait for the server to verify credentials
+
         const result = await login(username, password);
 
         if (result.success) {
-            // --- THE CHANGE IS HERE ---
-            // Check the role and decide where to send them
+
             if (result.role === 'member') {
-                navigate('/'); // Members go to the TV Board (Home)
+                navigate('/');
             } else {
-                navigate('/dashboard'); // Coaches go to the Admin Panel
+                navigate('/dashboard');
             }
         } else {
             alert('Invalid Credentials!');
